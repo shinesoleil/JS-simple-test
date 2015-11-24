@@ -16,5 +16,3 @@ function calculate_median(arr) {
     var filteredArr = arr.filter(isEvenIndexElement);
     return getMedian(filteredArr);
 }
-
-

@@ -22,7 +22,7 @@ function even_group_calculate_average(arr) {
     else {
         return newArray.reduce(groupByDigitNumber, [])
             .filter(function(element) {
-                return element!=undefined
+                return element!=undefined;
             })
             .map(function(element) {
                 return element[0]/element[1];
