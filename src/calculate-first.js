@@ -1,17 +1,19 @@
-function isEvenIndexElement(element, index) {
-    return ((index+1)%2 == 0);
+function isEvenIndex(number, index) {
+    return (index+1)%2 == 0;
 }
 
-function isRepeat(element, index, array) {
-    for(var i=0; i<array.length; i++) {
-        if(element != array[i] && i!=index) {
-            return true;
-            break;
-        }
-        return false;
-    }
+function isNotRepeatedNumber(number, index, array) {
+    return array.indexOf(number) == array.lastIndexOf(number);
+
+    // for(var i=0; i<array.length; i++) {
+    //     if(number == array[i] && i!=index) {
+    //         return false;
+    //         break;
+    //     }
+    //     return true;
+    // }
 }
 
 function single_element(arr) {
-    return arr.filter(isEvenIndexElement).filter(isRepeat);
+    return arr.filter(isEvenIndex).filter(isNotRepeatedNumber);
 }

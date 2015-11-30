@@ -1,5 +1,5 @@
-function isEvenIndexElement(element, index) {
-    return ((index+1)%2 == 0);
+function isEvenIndex(number, index) {
+    return (index+1)%2 == 0;
 }
 
 function getMedian(arr) {
@@ -13,6 +13,6 @@ function getMedian(arr) {
 }
 
 function calculate_median(arr) {
-    var filteredArr = arr.filter(isEvenIndexElement);
+    var filteredArr = arr.filter(isEvenIndex);
     return getMedian(filteredArr);
 }
